@@ -149,4 +149,8 @@
       - Define an abstract base class or interface as Builder and have the director work on the builder and not the concrete builder implementations.
 
 - CREATIONAL PATTERN: PROTOTYPE:
-  - 
+  - The intent of this pattern is to specify the kinds of objects to create using a ptototypical instance, and create new objects by copying this prototype.
+  - Remove client requirement to have intrinsic knowledge of concrete classes ad how to create them.
+  - Prototype declares an interface for cloning itself.
+  - COncrete Prototype implements an operation for cloning itself.
+  - Client creates a new object by asking a prototype to clone itself.
