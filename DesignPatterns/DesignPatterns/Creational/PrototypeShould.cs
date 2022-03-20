@@ -20,7 +20,7 @@ namespace DesignPatterns.Creational
         public void CloneManager()
         {
             person1 = new Manager("Flann O'Brien");
-            person2 = person1.Clone();
+            person2 = person1.Clone(false);
 
             Assert.AreEqual(((Manager)person1).Name, ((Manager)person2).Name);
         }
@@ -29,9 +29,18 @@ namespace DesignPatterns.Creational
         public void CloneEmployee()
         {
             person1 = new Employee("Patrick McCabe", new Manager("Flann O'Brien"));
-            person2 = person1.Clone();
+            person2 = person1.Clone(false);
 
             Assert.AreSame(((Employee)person1).Manager, ((Employee)person2).Manager);
+        }
+
+        [Test()]
+        public void DeepCloneEmployee()
+        {
+            person1 = new Employee("Patrick McCabe", new Manager("Flann O'Brien"));
+            person2 = person1.Clone(true);
+
+            Assert.AreNotSame(((Employee)person1).Manager, ((Employee)person2).Manager);
         }
     }
 }

@@ -152,5 +152,36 @@
   - The intent of this pattern is to specify the kinds of objects to create using a ptototypical instance, and create new objects by copying this prototype.
   - Remove client requirement to have intrinsic knowledge of concrete classes ad how to create them.
   - Prototype declares an interface for cloning itself.
-  - COncrete Prototype implements an operation for cloning itself.
+  - Concrete Prototype implements an operation for cloning itself.
   - Client creates a new object by asking a prototype to clone itself.
+  - Shallow copy:
+    - Copy of primitive type values
+    - Complex type values will be shared across clones.
+  - Deep copy:
+    - Copy of priitive values and complex type values.
+  - ICloneable interface:
+    - ICloneable enables us to provide a customized implementation that creates a copy of an existing object.
+    - Disadvantages. 
+      - It does not specify whether the cloning operation performs a deep copy, a shallow copy. or something inbetween.
+      - It doesn't require all property values of the original instance to be copied to the new instance.
+      - It returns an object, which means that the client would need an additional cast.
+  - Use Cases:
+    - When a system should be independent of how its objects are created and to avoid building a set of factories that mimic the class hierarchy.
+    - When a system should be independent of how its objects are created and when instances of a class can have one of only a few different combinations of states.
+  - Consequences:
+    - Prototype hides the concrete product classes from the client, which reduces what the client needs to know.
+    - Reduced subclassing.
+    - Each implementation of the prototype base class must implement its own clone method.
+  - Related patterns:
+    - Abstract factory: Might store a set of prototypes from which it clones when a new instance is requested.
+    - Factory method: Based on inheritance, but doesn't require an initization step.
+    - Singleton: Can be implemented as a singleton.
+    - Composite: Can use prototype for convenient object creation.
+    - Decorator: Can use prototype for convenient object creation.
+  - Summary:
+    - Intent is to specify the kinds of objects to create using a prototypical instance and to create new objects by copying this prototype.
+    - Implementation means that subclasses implement the Clone() method and clients work on the prototype.
+    - SHallow copy is a copy of primitive types values, which a deep copy is a copy of primitive type values and complex type values.
+
+- STRUCTURAL PATTERN: ADAPTER:
+  - 
