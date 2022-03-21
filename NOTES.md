@@ -184,4 +184,11 @@
     - SHallow copy is a copy of primitive types values, which a deep copy is a copy of primitive type values and complex type values.
 
 - STRUCTURAL PATTERN: ADAPTER:
-  - 
+  - AKA "Wrapper" pattern. Class adapter & object adaper.
+  - Intent of this pattern is to convert the interface of a class into another interface client expect.
+  - Adapter allows for classes to work together that could not otherwsie because of incompatible interfaces.
+  - Two variations. "Adapt the external system."
+  - Adaptee defines an existing interface that needs to be adapted.
+  - Target defines the domain-specific interface that the client works with.
+  - Client collaborates with objects conforming to the target interface.
+  - Adapter adapts the interface of the adaptee to the target interface.

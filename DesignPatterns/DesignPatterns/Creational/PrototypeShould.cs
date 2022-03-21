@@ -6,6 +6,8 @@ namespace DesignPatterns.Creational
 {
     public class PrototypeShould
     {
+        const string EMPLOYEE_NAME = "James Joyce";
+        const string MANAGER_NAME = "Flann O'Brien";
         Person? person1;
         Person? person2;
 
@@ -19,7 +21,7 @@ namespace DesignPatterns.Creational
         [Test()]
         public void CloneManager()
         {
-            person1 = new Manager("Flann O'Brien");
+            person1 = new Manager(MANAGER_NAME);
             person2 = person1.Clone(false);
 
             Assert.AreEqual(((Manager)person1).Name, ((Manager)person2).Name);
@@ -28,7 +30,7 @@ namespace DesignPatterns.Creational
         [Test()]
         public void CloneEmployee()
         {
-            person1 = new Employee("Patrick McCabe", new Manager("Flann O'Brien"));
+            person1 = new Employee(EMPLOYEE_NAME, new Manager(MANAGER_NAME));
             person2 = person1.Clone(false);
 
             Assert.AreSame(((Employee)person1).Manager, ((Employee)person2).Manager);
@@ -37,7 +39,7 @@ namespace DesignPatterns.Creational
         [Test()]
         public void DeepCloneEmployee()
         {
-            person1 = new Employee("Patrick McCabe", new Manager("Flann O'Brien"));
+            person1 = new Employee(EMPLOYEE_NAME, new Manager(MANAGER_NAME));
             person2 = person1.Clone(true);
 
             Assert.AreNotSame(((Employee)person1).Manager, ((Employee)person2).Manager);
