@@ -18,6 +18,11 @@
     <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj" />
     <ProjectReference Include="..\Adapter\Adapter.csproj" />
     <ProjectReference Include="..\Builder\Builder.csproj" />
+    <ProjectReference Include="..\Creational\AbstractFactory\AbstractFactory.csproj" />
+    <ProjectReference Include="..\Creational\Builder\Builder.csproj" />
+    <ProjectReference Include="..\Creational\FactoryMethod\FactoryMethod.csproj" />
+    <ProjectReference Include="..\Creational\Prototype\Prototype.csproj" />
+    <ProjectReference Include="..\Creational\Singleton\Singleton.csproj" />
     <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />

@@ -5,9 +5,9 @@ VisualStudioVersion = 17.1.32228.430
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{AEDFA3C6-5CBA-488F-B4D6-50F07B28D6D3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Singleton.csproj", "{5A9188A4-AB6E-4F1E-A44B-9497CED3773B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Creational\Singleton\Singleton.csproj", "{5A9188A4-AB6E-4F1E-A44B-9497CED3773B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethod", "FactoryMethod\FactoryMethod.csproj", "{93B1EB45-E45C-4DE4-9DCE-381566EFE584}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethod", "Creational\FactoryMethod\FactoryMethod.csproj", "{93B1EB45-E45C-4DE4-9DCE-381566EFE584}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational", "Creational", "{9F4A89D1-6D0C-4C11-9BE2-599609EE5F3A}"
 EndProject
@@ -17,11 +17,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\README.md = ..\README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "AbstractFactory\AbstractFactory.csproj", "{8E89CD12-A5AA-4726-ADE5-876598E2EBC9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "Creational\AbstractFactory\AbstractFactory.csproj", "{8E89CD12-A5AA-4726-ADE5-876598E2EBC9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Builder\Builder.csproj", "{8DBB3B7F-DAEB-46D1-8AAA-FB9A26632142}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Creational\Builder\Builder.csproj", "{8DBB3B7F-DAEB-46D1-8AAA-FB9A26632142}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Prototype\Prototype.csproj", "{57549F67-C831-4E90-A003-55E1CD33479B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prototype", "Creational\Prototype\Prototype.csproj", "{57549F67-C831-4E90-A003-55E1CD33479B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Structural", "Structural", "{0D18CF01-B9EF-4CEE-899E-5778F65AA943}"
 EndProject

@@ -188,7 +188,29 @@
   - Intent of this pattern is to convert the interface of a class into another interface client expect.
   - Adapter allows for classes to work together that could not otherwsie because of incompatible interfaces.
   - Two variations. "Adapt the external system."
-  - Adaptee defines an existing interface that needs to be adapted.
-  - Target defines the domain-specific interface that the client works with.
-  - Client collaborates with objects conforming to the target interface.
-  - Adapter adapts the interface of the adaptee to the target interface.
+  - Object adapter:
+    - Adaptee defines an existing interface that needs to be adapted.
+    - Target defines the domain-specific interface that the client works with.
+    - Client collaborates with objects conforming to the target interface.
+    - Adapter adapts the interface of the adaptee to the target interface.
+  - Class adapter:
+    - C# prefers composition over inheritance and does not support multiple inheritance.
+    - Adapter dervives from the adaptee.
+  - Use cases:
+    - When you want to use an existing class but the interface does not match the one you need.
+    - When you want to create a reuseable class, the adapter, that works with classes that don't have compatible interfaces.
+    - When you need to use several existing subclasses, don't want to create additional subclasses for each of them, but still need to adapt their interface.
+  - Consequesnces:
+    - A single adapter can work with many adaptees, and can add functionality to all adaptees at once.
+    - The interface is separated out from the rest od the code. Single responsobility principle.
+    - New types of adapters can be introduced withut breaking client code. Open/closed principle.
+    - The object adapter makes it hard to override adaptee behavior.
+    - Aditional complexity is introduced.
+  - Related:
+    - Bridge: Seperates interface from implementation, adapter changes the interface of an existing object.
+    - Decorator: Changes an obkect without changing its interface, adapter changes the interface of an existing object.
+    - Facade: You define a new interface for an entire subsystem, with adapter you'ree making an eisting interface useable via wrapping.
+    - Proxy: Defines a surrogate for another object, but does not change its interface.
+  - Summary:
+    - Lets classses work together that couldn't before because of incompatible interfaces.
+    - Object adapter relies on composition. Class adapter relies on multiple inheritance.
