@@ -283,8 +283,22 @@
   - Variations exist.
     - Original template defines an operation to get a specific child.
     - Original template defines child management operations on the component abstract base class.
+  - Use cases:
+    - When you want to represent part-whole hierarchies of objects.
+    - When you want to be able to ignore the differece between compositions of objects and individual objects.
+  - Pattern Consequences:
+    - Makes the client simple.
+    - Its easy to add new kinds of components. Open/closed principle.
+    - It can make the overall system too generic.
+  - Related Patterns:
+    - Chain of responsibility: Leaf component can pass a request through a chain of all parent components.
+    - Iteratr: Can be used to traverse composites.
+    - Visitor: Can be used to execute an operation over the full composite tree.
+  - Summary:
+    - Provide a transparent, easy way to work with tree-like structures.
 
-- STRUCTURAL PATTERN: FACADE
+- STRUCTURAL PATTERN: FACADE:
+  - 
 
 - STRUCTURAL PATTERN: PROXY
 
