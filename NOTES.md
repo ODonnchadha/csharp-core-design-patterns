@@ -215,7 +215,7 @@
     - Lets classses work together that couldn't before because of incompatible interfaces.
     - Object adapter relies on composition. Class adapter relies on multiple inheritance.
 
-- STRUCTURAL PATTERN: BRIDGE
+- STRUCTURAL PATTERN: BRIDGE:
   - The intent of this pattern is to decouple an abstraction from its implementation so the two can vary independently.
   - Seperate abstraction from implementation.
     - A means to replace an implementation with another implementation without modifying the abstraction.
@@ -226,8 +226,36 @@
   - Refined abstraction extends the interface defined by abstraction.
   - Implementor defines the interface for imlementation classes.
   - Concrete implementor implements the implementor interface and defines its concrete implementation.
+  - Use cases:
+    - When you want to avoid a permanent binding between an abstraction and its implementation (to enable swithing implementations at runtime.)
+    - When abstraction and implementations should be extensible by subclassing.
+    - When you don't want changes in the implementation of an abstraction to have an impact on the client.
+  - Pattern consequences:
+    - Decoupling: The implementation isn't permanently bound to thr abstraction.
+    - As the abstraction and implementation hiearchies can evolve independently, new ones can be introduced as such. Open/closed principle.
+    - You can hide implementation details away from clients.
+    - You can focus on high-level logic in the abstraction and on the details in the implementation. Single responsibility principle.
+  - Related patterns:
+    - Abstract factory: Factory can create and configure a bridge.
+    - Adapter: Adapter lets unrelated classes wrk together, bridge lets abstractions and implementation vary independently.
+    - Strategy: Based on composition, like bridge.
+    - State: Based on composition, like bridge.
+  - Summary:
+    - Decouple an abstraction from its implementation so the two can vary independently.
+    - Main consequences: Decoupling. Improved extensibility. Hidden implementation details.
 
-- STRUCTURAL PATTERN: DECORATOR
+- STRUCTURAL PATTERN: DECORATOR:
+  - The intent of the pattern s to attach additional responsibilities to an object dynamically. 
+  - A decorator thus provides a flexible alternative to subclassing for extendung functionality. "Wrapper." (Like adapter.)
+  - Adding responsibility to a class can be done by adding an additional method to the class.
+  - We don't want to add that responsibility to a class, we want to add it to an instance of a class, an object, at runtime.
+  - Classes can be extended with additional functionality:
+    - Leads to violations of the single responsibility principle.
+    - Classes get littered with code that doesn't belong there.
+  - Component defines the interface for objects that can have responsibilities added to them dynamically.
+  - Concrete component defines an object to which additional responsibilities can be attached.
+  - Decorator maintains a reference to a component object, and defines an interface that conforms to the component's interface.
+  - Concrete decorator adds responsibilities to the component.
 
 - STRUCTURAL PATTERN: COMPOSITE
 
