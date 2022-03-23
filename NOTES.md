@@ -214,3 +214,25 @@
   - Summary:
     - Lets classses work together that couldn't before because of incompatible interfaces.
     - Object adapter relies on composition. Class adapter relies on multiple inheritance.
+
+- STRUCTURAL PATTERN: BRIDGE
+  - The intent of this pattern is to decouple an abstraction from its implementation so the two can vary independently.
+  - Seperate abstraction from implementation.
+    - A means to replace an implementation with another implementation without modifying the abstraction.
+    - Think of an abstraction as a way to simplify something complex. e.g.: Console.WriteLine();
+    - Abstractions handle complexity by hiding the parts we don't need to know about.
+    - Subclassing is one way to add functionality. Subclassing tends to add avoidable complexity.
+  - Abstraction defines the abstraction's interface and holds a reference to the implementor.
+  - Refined abstraction extends the interface defined by abstraction.
+  - Implementor defines the interface for imlementation classes.
+  - Concrete implementor implements the implementor interface and defines its concrete implementation.
+
+- STRUCTURAL PATTERN: DECORATOR
+
+- STRUCTURAL PATTERN: COMPOSITE
+
+- STRUCTURAL PATTERN: FACADE
+
+- STRUCTURAL PATTERN: PROXY
+
+- STRUCTURAL PATTERN: FLYWEIGHT
