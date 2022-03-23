@@ -19,6 +19,7 @@
     <ProjectReference Include="..\Adapter\Adapter.csproj" />
     <ProjectReference Include="..\Bridge\Bridge.csproj" />
     <ProjectReference Include="..\Builder\Builder.csproj" />
+    <ProjectReference Include="..\Composite\Composite.csproj" />
     <ProjectReference Include="..\Creational\AbstractFactory\AbstractFactory.csproj" />
     <ProjectReference Include="..\Creational\Builder\Builder.csproj" />
     <ProjectReference Include="..\Creational\FactoryMethod\FactoryMethod.csproj" />

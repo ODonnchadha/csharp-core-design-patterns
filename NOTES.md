@@ -256,8 +256,33 @@
   - Concrete component defines an object to which additional responsibilities can be attached.
   - Decorator maintains a reference to a component object, and defines an interface that conforms to the component's interface.
   - Concrete decorator adds responsibilities to the component.
+    - When you have a need to add responsibilities to individual objects dynamically without affecting other objects.
+    - When you need to be able to withdraw responsibilities you attached to an object.
+    - When extension by subclassing is impractical or impossible.
+  - Pattern Consequences:
+    - More flexible than using static inheritance via subclassing: Responsibilities can be added and removed at runtime as hoc.
+    - You can use the pattern to split feature-loaded classes until there's just one responsibility left per class: Single responsibility principle.
+    - Increased efort is required to learn the system due to the amount of small, simple classes.
+  - Related Patterns:
+    - Adapter: Gives a new interface to an object, decorator only changes its responsibilities.
+    - Composite: Adapter can be seen as a composite with only one component.
+    - Strategy: Decorator lets you change the skin of an object, strategy lets you change its inner workings.
+  - Summary:
+    - Attach additional responsibilities to an object dynamically.
+    - More flexible than static inheritance through subclassing.
 
-- STRUCTURAL PATTERN: COMPOSITE
+- STRUCTURAL PATTERN: COMPOSITE:
+  - The intent of this pattern is to compose objects into tree structures to represent part-whole hierarchies.
+  - As such, it lets clients treat individual objects and compositions of objects unifornly: as if they all were individual objects.
+  - e.g.: XML document structure.
+  - Intrinsic knowledge about the object type is required: Class. Method to call. Nesting level.
+  - Component declares the interface for objects on the compositions, and contains a common operation.
+  - Leaf represents leaf objects in the composition, and has no children. It defines behavior for primitive objects in the composition.
+  - Composite sotres child components and defines behavior for components having children.
+  - Client manipulates objects in the composites through the component interface.
+  - Variations exist.
+    - Original template defines an operation to get a specific child.
+    - Original template defines child management operations on the component abstract base class.
 
 - STRUCTURAL PATTERN: FACADE
 
