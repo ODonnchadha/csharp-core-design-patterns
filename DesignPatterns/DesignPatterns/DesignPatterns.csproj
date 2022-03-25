@@ -26,6 +26,7 @@
     <ProjectReference Include="..\Creational\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\Creational\Singleton\Singleton.csproj" />
     <ProjectReference Include="..\Decorator\Decorator.csproj" />
+    <ProjectReference Include="..\Facade\Facade.csproj" />
     <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />

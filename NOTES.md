@@ -298,8 +298,32 @@
     - Provide a transparent, easy way to work with tree-like structures.
 
 - STRUCTURAL PATTERN: FACADE:
-  - 
+  - Intent of this pattern is to provode a unified interface to a set of interfaces in a subsystem. 
+  - It defines a higher-level interface that makes the subsystem easier to use.
+  - Facade knows which subsystem classes are responsible for a request and delegates client requests to appropriate subsystem objects.
+  - Each subsystem class implements subsystem functionality. They don't know about the facade, but they do handle wprk assigned by it.
+  - Use cases:
+    - When you want to provide a simple interface into a complex subsystem.
+    - When there are many dependencies between a client and the implementation classese of the abstraction.
+  - Consequences:
+    - The number of objects clients have to deal wuth are reduced.
+    - It promotes weak coupling between the subsystem and its clients, enabling subsystem components to vary without affecting the client. Open/closed principle.
+    - Clients are nor forbidden to use the subsystem classes.
+  - Related patterns:
+    - Abstract factory: Can provide an interface for creating subsystem objects.
+    - Mediator: Also abstracts functionality of existing classes, but its purpose is abstracting communication between objects, while facade is about promoting easy of use.
+    - Adapter: Makes existing interfaces useable by wrapping one object, while with facade you're defining a new interface for an entire subsystem.
+  - Summary:
+    - Make it easier for a client to use subsystems by rovoding one or more interfaces into those subsystems.
+    - Higher-level layer to promote ease of use.
 
 - STRUCTURAL PATTERN: PROXY
+  - AKA "surrogate" pattern. The intent of this pattern is to provide a surrogate or placeholder for another object to control access to it.
+  - e.g.: Security reasons. Performance reasons. "Add service reference" for API interaction.
+  - Proxy is responsible for controlling the actual access to the remote API.
+    - Provides an interface identical to the actual call. Although sometimes this is diverted from.
+    - Proxy can take on the responsibility of executing code before or after calling the API.
+  - Pattern structure:
+    - Subject 
 
 - STRUCTURAL PATTERN: FLYWEIGHT
