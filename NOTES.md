@@ -324,6 +324,19 @@
     - Provides an interface identical to the actual call. Although sometimes this is diverted from.
     - Proxy can take on the responsibility of executing code before or after calling the API.
   - Pattern structure:
-    - Subject 
+    - Subject defines the common interface between the real subject and the proxy. This is the contract.
+    - Real subject defines the real object that the proxy presents.
+    - Proxy provides and interface identical to the subject. It maintains a reference to and controls access to the real subject.
+  - Variations:
+    - Remote proxy: Client can communicate with the proxy. And it feels like a local resource.
+    - Virtual proxy: Allows for creating expensive objects on demand.
+    - Smart proxy: Allows adding additional logic around the subject.
+    - Protection proxy: Used to control access to an object.
+    - Seperation is not always clear. Not all code generators play nice.
+    - Chain proxies when multiple variations are required for the use case.
+  - Document object scenario:
+    - Virtual proxy to ensure creation only occurs when needed.
+    - Protection proxy to add a restriction on who can access the document.
+    - Proxy is lazy about initializing the document.
 
 - STRUCTURAL PATTERN: FLYWEIGHT
