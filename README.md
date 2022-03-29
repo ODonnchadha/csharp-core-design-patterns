@@ -1,2 +1,41 @@
-# csharp-ten-design-patterns
-Culled from a Pluralsight class entitled "C# 10 Design Patterns."
+## C# 10 Design Patterns by Kevin Dockx
+- This course will teach you how to improve code base by using tested and proven object-oriented design patterns.
+
+- COURSE OVERVIEW:
+  - Real-life examples. Use cases and associated consequences. And related patterns.
+
+- INTRODUCTION TO DESIGN PATTERNS:
+  - .NET 6.0 & C# 10. Visual Studio 2022. Prerequisites, frameworks, & tooling. GO4.
+  - All 23 GO4 patterns are covered. Intent. Structure. Implementation.
+  - The pattern internt should remain the same, regardless of surrounding implementation. Know what opportunity the pattern does resolve.
+  - Creational:
+    - Five patterns dealing with object creation.
+      - Abstracting the object instantiation process.
+      - Making the system independent of how its objects are created, composed, and represented.
+  - Structural:
+    - Seven patterns defining the relations between classes.
+      - Concerned with how classes & objects are composed to form larger structures.
+  - Behavioral:
+    - Eleven patterns dealing with ways to communicate between classes or objects.
+      - Characterize complex control flow that's difficult to follow at runtime. Concentrate on how objects are interconnected.
+  - Object-oriented principles:
+    - Program to an interfaces and not an implementation.
+      - This allows for loose coupling.
+      - Clients remain unaware of the specific types of objects they use as long as the objects adhere to the interface expected.
+      - Client remain unaware of the classes that implement these objects. Clients only know about the interface.
+      - Interface vs abstract class:
+        - Use an abstract base class when you need to provide some basic functionality that can potentially be overridden.
+        - Use an interface when you only need to specify the expected functionality of a class.
+      - Commonly correlates to adhering to the open/closed principle. SOLID.
+        - Software entities should be open for extension but closed for modification.
+    - Favor object composition over class inheritance.
+      - CLass inheritance. Lets you define the implementation of one class in terms of another.
+      - Object composition: New functionality is obtained by assembling or composing objects to get more complex functionality.
+      - Inheritance tends to be overused. Composition often simplifies desgins and makes them more reuseable.
+      - And commonly correlates to adhering to the single responsibility principle SOLID.
+        - A class should have one, and only one, reason to change.
+  - Summary:
+    - A design pattern is a general, reuseable solution to a commonly occuring problem within a given context in software design.
+    - Creational patterns help with making your system independent of how its objects are created, composed, and represented.
+    - Structural patterns are concerned with how classes and objects are composed to form larger structures.
+    - Behavorial patterns characterize complex control flow that's difficult to follow at runtime, and let you concentrate on the way objects are interconnected.
