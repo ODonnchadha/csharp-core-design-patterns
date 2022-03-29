@@ -176,4 +176,41 @@
       - Remote proxy. Virtual proxy. Smart proxy. Protection proxy.
 
 - FLYWEIGHT:
-  - 
+  - The intent of this pattern is to use sharing to support large number of fine-grained objects efficiently.
+  - It does that by sharing parts of the state between these objects instead of keeping all that state in all of the objects.
+  - e.g.: Creating a new object instance would require a lot of memory.
+  - Intrisic versus extrinsic state:
+    - Intrisic state data is independent of the context.
+    - Extrinsic state data varies with the context: Different class instances might have different extrinsic state data which cannot be shared.
+  - Considerations:
+    - Does the application use a large number of objects?
+    - Are storage costs high because of the large amount of objects?
+    - Can most of the object state be made extrinsic?
+    - If you remove extrinsic state, can a large group of objects be relaced by relatively few shared objects?
+    - Does the application require object identity?
+  - Flyweight declares an interface through which they can receive and act on extrinsic state.
+  - Flyweight factory creates and manages flyweights and ensures they are properly shared.
+  - Client maintains a reference of flyweights and computes or stores their extrinsic state.
+  - Working with an unshared concrete flyweight:
+    - Not all flyweights have to be shared.
+    - Ushared concrete flyweight enables acting on extrinsic state while having unshareable intrinsic state.
+    - No storage advantage anymore. But working with the flyweight remains transparent to the client.
+  - Use Cases:
+    - When the application uses a large number of objects.
+    - When storage costs are high because of the large amount of objects.
+    - When most of the object state can be made extrinsic.
+    - When, if you remove extrinsic state, a large group oj objects can be replaced by relatively few shared objects.
+    - When the application does not require object identity.
+  - Pattern Consequences:
+    - You may save a lot of memory when using the pattern for an applicable use case.
+    - Processing costs might go up, but that's typically offset by the reduced storage costs.
+    - The pattern is complex, which makes the code base more complicated as well.
+  - Related Patterns:
+    - State: Without instance variables makes these objects flyweights.
+    - Strategy: Can be implemented as flyweight.
+  - Summary:
+    - Use sharing to support large numbers if fine-grained object efficiently.
+    - Key concepts:
+      - Intrinsic state: State data that is independent of the context. It does not change when the object is used.
+      - Extrinsic state: State data that is not independent of the context and can change when the object is used.
+    - Variation: Unshared concrete flyweight: Doesn't have state to share.

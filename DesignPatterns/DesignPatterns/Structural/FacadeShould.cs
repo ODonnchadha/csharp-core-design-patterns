@@ -13,7 +13,7 @@ namespace DesignPatterns.Structural
         [TearDown()]
         public void TearDown() => f = null;
 
-            [Test()]
+        [Test()]
         public void Calculate()
         {
             Assert.AreEqual(f?.CalculateDiscountPercentage(1), 0);
