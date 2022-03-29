@@ -15,23 +15,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AbstractFactory\AbstractFactory.csproj" />
-    <ProjectReference Include="..\Adapter\Adapter.csproj" />
-    <ProjectReference Include="..\Bridge\Bridge.csproj" />
-    <ProjectReference Include="..\Builder\Builder.csproj" />
-    <ProjectReference Include="..\Composite\Composite.csproj" />
     <ProjectReference Include="..\Creational\AbstractFactory\AbstractFactory.csproj" />
     <ProjectReference Include="..\Creational\Builder\Builder.csproj" />
     <ProjectReference Include="..\Creational\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Creational\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\Creational\Singleton\Singleton.csproj" />
-    <ProjectReference Include="..\Decorator\Decorator.csproj" />
-    <ProjectReference Include="..\Facade\Facade.csproj" />
-    <ProjectReference Include="..\FactoryMethod\FactoryMethod.csproj" />
-    <ProjectReference Include="..\Flyweight\Flyweight.csproj" />
-    <ProjectReference Include="..\Prototype\Prototype.csproj" />
-    <ProjectReference Include="..\Proxy\Proxy.csproj" />
-    <ProjectReference Include="..\Singleton\Singleton.csproj" />
     <ProjectReference Include="..\Structural\Adapter\Adapter.csproj" />
     <ProjectReference Include="..\Structural\Bridge\Bridge.csproj" />
     <ProjectReference Include="..\Structural\Composite\Composite.csproj" />
