@@ -32,6 +32,13 @@
     <ProjectReference Include="..\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\Proxy\Proxy.csproj" />
     <ProjectReference Include="..\Singleton\Singleton.csproj" />
+    <ProjectReference Include="..\Structural\Adapter\Adapter.csproj" />
+    <ProjectReference Include="..\Structural\Bridge\Bridge.csproj" />
+    <ProjectReference Include="..\Structural\Composite\Composite.csproj" />
+    <ProjectReference Include="..\Structural\Decorator\Decorator.csproj" />
+    <ProjectReference Include="..\Structural\Facade\Facade.csproj" />
+    <ProjectReference Include="..\Structural\Flyweight\Flyweight.csproj" />
+    <ProjectReference Include="..\Structural\Proxy\Proxy.csproj" />
   </ItemGroup>
 
 </Project>
