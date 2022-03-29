@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Behavioral\Command\Command.csproj" />
     <ProjectReference Include="..\Behavioral\Strategy\Strategy.csproj" />
     <ProjectReference Include="..\Behavioral\TemplateMethod\TemplateMethod.csproj" />
     <ProjectReference Include="..\Creational\AbstractFactory\AbstractFactory.csproj" />

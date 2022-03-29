@@ -28,3 +28,39 @@
   - The Players:
     - Strategy declares an interface common to all supported algorithms. Context uses it to call the algorithm defined by a concrete strategy.
     - Context is configured with a Concrete Strategy object and maintains a reference to a Strategy object.
+  - Implementating a strategy pattern variation with a method parameter:
+    ```csharp
+      public void Export(IExportService service);
+    ```
+  - Use Cases:
+    - When many related classes differ only in their behavior.
+    - When you need different variants of an algorithm which you want to be able to switch a runtime.
+    - When your algorithm uses data, code, or dependencies that the clients shouldn't know about.
+    - When a class defines many different behaviors which appear as a bunch of conditional statements in its method.
+  - Pattern Consequences:
+    - It offers an alternative to subclassing your context.
+    - New strategies con be introduced without having to change the context: Open/closed principle.
+    - It eliminates conditional statements.
+    - It can provide a choice of implementations with the same behavior.
+    - If the client injects the strategy, the client must be aware of how strategies differ.
+    - There's overhead in communication between the strategy and the context.
+    - Additional objects are introduced, which increases complexity.
+  - Related Patterns:
+    - Flyweight: Strategy objects make good flyweights.
+    - Bridge: Also based on composition, but solves a different problem.
+    - State: Also based on composition, but solves a different problem.
+    - Template Method: Allows varying part of an algorithm through inheritance: A static approach. Strategy allows behavior to be switched at runtime via composition: A dynamic approach.
+  - Summary:
+    - To define a family of algorithms, encapsulate each one, and make them interchangeable.
+    - Common variation: Concrete strategy injected via method parameter.
+
+- COMMAND:
+  - The intent of this pattern is to encapsulate a request as an object, there letting you parameterize clients with different requests, queue or logs requests, and support undoable operations.
+  - The command pattern allows decoupling the requester of an action from the receiver.
+  - Very common in mobile or rich UI development.
+  - The Players:
+    - Invoker asks Command to carry out a request.
+    - Command declares an interface for executing an operation.
+    - Concrete Command defines a bidning between a Receiver and an action. It implements Execute() by invoking the corresponding operation(s) on a Receiver.
+    - Receiver knows how to perform the operation(s) associated with carrying out a request.
+    - Client creates the COncrete Command and sets its Receiver.
