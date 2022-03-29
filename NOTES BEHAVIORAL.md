@@ -1,0 +1,8 @@
+- TEMPLATE METHOD:
+  - This is a fundamental pattern RE: code reuse.
+  - The intent of this pattern is to define the skelton of an algorithm in a operation, deferring some steps to subclasses.
+  - It lets subclasses redefine certain steps for an algorithm without changing the algorithm's structure.
+  - The steps needed to be executed are the same for all classes, but some implementations can differ.
+  - Abstract class defines the abstract primitive operations that concrete subclasses define to implement steps of an algorithm.
+  - Also implements a template method defining the skeleton of an algorithm.
+  - Concrete class implements the primitive operations to carry out subclass-specific steps of the algorithm.
