@@ -6,3 +6,25 @@
   - Abstract class defines the abstract primitive operations that concrete subclasses define to implement steps of an algorithm.
   - Also implements a template method defining the skeleton of an algorithm.
   - Concrete class implements the primitive operations to carry out subclass-specific steps of the algorithm.
+  - Use Cases:
+    - When you want to implement invariant parts of an algorithm only once, and want to leave it to subclasses to implement the rest of the behavior.
+    - When you want to control which part of an algorithm subclasses can vary.
+    - When you have a set of algorithms that don't vary much.
+  - Pattern Consequences:
+    - Template methods are fundamental technique for code reuse.
+    - Template methods cannot be changed: The order of the methods thaey call is fixed:
+  - Related Patterns:
+    - Factory Method: Can be viewed as a specialization of template method. Template methods often use factory methods as part of their skeleton structure.
+    - Strategy: Template method allows varying part of an algorithm through inheritance: A static approach. Strategy allows behavior to be switched at runtime, via composition: A dynamic approach.
+  - Summary:
+    - To define the skeleton of an algorithm in the operation, deferring some steps to subclasses.
+    - Define the template method on the abstract base class and don't allow overridding it.
+    - Mark methods that differ per subclass as abstract. Mark mwthods that differ for some subclasses as virtual.
+
+- STRATEGY:
+  - AKA Policy pattern.
+  - The intent of this pattern is to define a family of algorithms, encapsulate each one, and then make them interchangeable. 
+  - Strategy lets the algorithm vary independently from clients that use it.
+  - The Players:
+    - Strategy declares an interface common to all supported algorithms. Context uses it to call the algorithm defined by a concrete strategy.
+    - Context is configured with a Concrete Strategy object and maintains a reference to a Strategy object.

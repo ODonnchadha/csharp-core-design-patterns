@@ -11,14 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FactoryMethod", "Creational
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Creational", "Creational", "{9F4A89D1-6D0C-4C11-9BE2-599609EE5F3A}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{03ACAF37-ACD5-4570-B54F-DD16A670F515}"
-	ProjectSection(SolutionItems) = preProject
-		..\NOTES BEHAVIORAL.md = ..\NOTES BEHAVIORAL.md
-		..\NOTES CREATIONAL.md = ..\NOTES CREATIONAL.md
-		..\NOTES STRUCTURAL.md = ..\NOTES STRUCTURAL.md
-		..\README.md = ..\README.md
-	EndProjectSection
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AbstractFactory", "Creational\AbstractFactory\AbstractFactory.csproj", "{8E89CD12-A5AA-4726-ADE5-876598E2EBC9}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Builder", "Creational\Builder\Builder.csproj", "{8DBB3B7F-DAEB-46D1-8AAA-FB9A26632142}"
@@ -44,6 +36,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Behavioral", "Behavioral", "{8453B26D-9322-44A5-AB65-F25165D18CB6}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TemplateMethod", "Behavioral\TemplateMethod\TemplateMethod.csproj", "{32F0302D-53D6-4254-A54F-3A6B99EAE30C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Strategy", "Behavioral\Strategy\Strategy.csproj", "{AEE53F48-DC90-4060-9D1C-912F6F53DF56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -107,6 +101,10 @@ Global
 		{32F0302D-53D6-4254-A54F-3A6B99EAE30C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32F0302D-53D6-4254-A54F-3A6B99EAE30C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32F0302D-53D6-4254-A54F-3A6B99EAE30C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AEE53F48-DC90-4060-9D1C-912F6F53DF56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AEE53F48-DC90-4060-9D1C-912F6F53DF56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AEE53F48-DC90-4060-9D1C-912F6F53DF56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AEE53F48-DC90-4060-9D1C-912F6F53DF56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -125,6 +123,7 @@ Global
 		{48D5E6EB-84E8-43AF-B68E-A02598D6BC35} = {0D18CF01-B9EF-4CEE-899E-5778F65AA943}
 		{48739FCC-817C-40A1-AC8A-B0DDCE082794} = {0D18CF01-B9EF-4CEE-899E-5778F65AA943}
 		{32F0302D-53D6-4254-A54F-3A6B99EAE30C} = {8453B26D-9322-44A5-AB65-F25165D18CB6}
+		{AEE53F48-DC90-4060-9D1C-912F6F53DF56} = {8453B26D-9322-44A5-AB65-F25165D18CB6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {1556CDD1-5F47-426F-B74F-5D124E976F1D}
