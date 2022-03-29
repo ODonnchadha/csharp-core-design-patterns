@@ -5,6 +5,7 @@ namespace DesignPatterns.Structural
     public class ProxyShould
     {
         private string FILE_NAME = "document.pdf";
+        private string DISPLAY_TEXT = "DOCUMENT Lorem ipsum.";
 
         [SetUp()]
         public void SetUp() { }
@@ -17,7 +18,7 @@ namespace DesignPatterns.Structural
         {
             var document = new Proxy.Proxies.Virtual.DocumentProxy(FILE_NAME);
 
-            Assert.AreEqual(document.DisplayDocument(), "DOCUMENT Lorem ipsum.");
+            Assert.AreEqual(document.DisplayDocument(), DISPLAY_TEXT);
         }
 
         [Test()]
@@ -25,7 +26,7 @@ namespace DesignPatterns.Structural
         {
             var document = new Proxy.Proxies.Protected.DocumentProxy(FILE_NAME, "Admin");
 
-            Assert.AreEqual(document.DisplayDocument(), "DOCUMENT Lorem ipsum.");
+            Assert.AreEqual(document.DisplayDocument(), DISPLAY_TEXT);
         }
     }
 }

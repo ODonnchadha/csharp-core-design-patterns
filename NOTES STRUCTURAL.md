@@ -153,5 +153,27 @@
     - Virtual proxy to ensure creation only occurs when needed.
     - Protection proxy to add a restriction on who can access the document.
     - Proxy is lazy about initializing the document.
+  - Use Cases:
+    - Use the pattern when you need to add some form of access control to an actual object.
+      - Remote proxy: When you want to provide  local representative.
+      - Virtual proxy: When you only want to create expensive objects on demand.
+      - Smart proxy: When you're in need of a caching or locking scenario.
+      - Protection proxy: When objects should have different access rules.
+  - Pattern consequences:
+    - Remote proxy: Hides the fact that an object resides in a different netwrok space.
+    - Virtaul proxy: The object can be created on demand.
+    - Smart proxy: Additional housekeeping tasks can be executed when an object is accessed.
+    - Protection proxy: Additional housekeeping tasks can be execute when an object is accessed.
+    - Allows introduced new proxies without changing the client code: Open/closed principle.
+    - Added cmplexity because of additional classes.
+    - Performance impact of passing through additional layers.
+  - Related Patterns:
+    - Adapter: Provides a different interface while the proxy provides the same interface.
+    - Decorator: Adds responsibilities to n object, while proxy controls access to an object.
+  - Summary:
+    - Provide a surrogate, or placeholder, for another object to control access to it.
+    - Variations:
+      - Remote proxy. Virtual proxy. Smart proxy. Protection proxy.
 
-- STRUCTURAL PATTERN: FLYWEIGHT
+- FLYWEIGHT:
+  - 
