@@ -25,7 +25,7 @@ namespace Command.Receivers
         public void Remove(int managerId, Employee employee) =>
             _managers.First(m => m.Id == managerId).Employees.Remove(employee);
 
-        public string WriteDataStore()
+        public string Write()
         {
             StringBuilder sb = new StringBuilder { };
 

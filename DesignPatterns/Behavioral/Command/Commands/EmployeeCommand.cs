@@ -42,5 +42,15 @@ namespace Command.Commands
 
             _receiver.Add(_id, _employee);
         }
+
+        public void Undo()
+        {
+            if (_employee == null)
+            {
+                return;
+            }
+
+            _receiver.Remove(_id, _employee);
+        }
     }
 }

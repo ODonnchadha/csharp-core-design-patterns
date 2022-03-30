@@ -9,6 +9,9 @@ namespace DesignPatterns.Behavioral
 {
     public class CommandShould
     {
+        private int JAMES = 1;
+        private int FLANN = 2;
+
         private CommandInvoker? invoker;
         private IEmployeeManagerReceiver? receiver;
 
@@ -32,17 +35,23 @@ namespace DesignPatterns.Behavioral
 #pragma warning disable CS8604 // Possible null reference argument.
             invoker?.Invoke(
                 new EmployeeCommand(
-                    1, new Employee(1, "ROBERT MCLIAM WILSON"), receiver));
+                    JAMES, new Employee(3, "ROBERT MCLIAM WILSON"), receiver));
             invoker?.Invoke(
                 new EmployeeCommand(
-                    1, new Employee(2, "JOHN B. KEANE"), receiver));
+                    JAMES, new Employee(4, "JOHN B. KEANE"), receiver));
             invoker?.Invoke(
                 new EmployeeCommand(
-                    2, new Employee(3, "PATRICK MCCABE"), receiver));
+                    FLANN, new Employee(5, "PATRICK MCCABE"), receiver));
 #pragma warning restore CS8604 // Possible null reference argument.
 
-            Assert.AreEqual(receiver?.WriteDataStore(), 
-                "MANAGER 1, JAMES JOYCE EMPLOYEE 1, ROBERT MCLIAM WILSON EMPLOYEE 2, JOHN B. KEANE MANAGER 2, FLANN O'BRIEN EMPLOYEE 3, PATRICK MCCABE");
+            Assert.AreEqual(receiver?.Write(), 
+                "MANAGER 1, JAMES JOYCE EMPLOYEE 3, ROBERT MCLIAM WILSON EMPLOYEE 4, JOHN B. KEANE MANAGER 2, FLANN O'BRIEN EMPLOYEE 5, PATRICK MCCABE");
+
+            invoker?.Undo();
+            invoker?.Undo();
+
+            Assert.AreEqual(receiver?.Write(),
+                "MANAGER 1, JAMES JOYCE EMPLOYEE 3, ROBERT MCLIAM WILSON MANAGER 2, FLANN O'BRIEN");
         }
     }
 }

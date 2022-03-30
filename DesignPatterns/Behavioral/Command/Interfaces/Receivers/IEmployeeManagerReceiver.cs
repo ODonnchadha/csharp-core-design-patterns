@@ -10,6 +10,6 @@ namespace Command.Interfaces.Receivers
         void Add(int managerId, Employee employee);
         void Remove(int managerId, Employee employee);
         bool Exists(int managerId, int employeeId);
-        string WriteDataStore();
+        string Write();
     }
 }
