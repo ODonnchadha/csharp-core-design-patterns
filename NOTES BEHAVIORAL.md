@@ -64,3 +64,33 @@
     - Concrete Command defines a bidning between a Receiver and an action. It implements Execute() by invoking the corresponding operation(s) on a Receiver.
     - Receiver knows how to perform the operation(s) associated with carrying out a request.
     - Client creates the COncrete Command and sets its Receiver.
+  - Use Cases:
+    - When you want to parameterize objects with an action to perform.
+    - When you want to support undo.
+    - When you want to specify, queue, and execute requests at differet times.
+    - When you need to store a list of changes to potentially reapply later on.
+  - Pattern Consequences:
+    - It decouples the class that invokes the peration from the one that knows how to perform it: Single responsibility principle.
+    - Command can be manipulated and extended.
+    - Commands can be assembled into a composite command.
+    - Existing implementations don't have to be changed to add new commands: Open/closed principle.
+    - Because an additional layer is added, complexity increases.
+  - Related Patterns:
+    - Composite: Can be used to implement commands composed of other commands.
+    - Memento: Can be used to store the state a command requires to undo its effect.
+    - Prototype: In case of supporting undo, a command that must be copied acts as a prototype.
+    - Chain Of Responsibility: Handlers can be implemented as commands.
+  - Patterns That Connect Senders & Receivers:
+    - Chain Of Responsibility: Passes a request along a chain of receivers.
+    - Command: Connects senders with receivers unidirectionally.
+    - Mediator: Eliminates direct connections altogether.
+    - Observer: Allows receivers of requests to (un)subscribe at runtime.
+  - Summary:
+    - Intended to encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.
+    - Define methods on command. IMplement on concrete command.
+    - Invoker is often a UI element. Receiver can be any object.
+    - Consider using a command manager. e.g.: Undo/redo.
+
+- MEMENTO:
+  - AKA token pattern.
+  - 
