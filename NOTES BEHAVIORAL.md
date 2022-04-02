@@ -93,4 +93,6 @@
 
 - MEMENTO:
   - AKA token pattern.
-  - 
+  - The intent of this pattern is to capture and externlize an object's internal state so that the onject can be restored to this state later, without violation encapsulation.
+  - Store and restore private field and property values.
+  - Solve with memento: Making internal state public breaks encapsulation.
