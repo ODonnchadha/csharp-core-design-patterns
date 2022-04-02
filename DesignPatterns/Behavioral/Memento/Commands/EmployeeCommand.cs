@@ -1,14 +1,15 @@
 ﻿using Memento.Interfaces.Commands;
 using Memento.Interfaces.Receivers;
+using Memento.Mementos;
 using Memento.Models;
 
 namespace Memento.Commands
 {
     public class EmployeeCommand : ICommand
     {
-        private readonly int _id;
+        private int _id;
         private readonly IEmployeeManagerReceiver _receiver;
-        private readonly Employee? _employee;
+        private Employee? _employee;
         public EmployeeCommand(
             int id,
             Employee? employee,
@@ -17,6 +18,22 @@ namespace Memento.Commands
             _id = id;
             _employee = employee;
             _receiver = receiver;
+        }
+
+        /// <summary>
+        /// Originator.
+        /// </summary>
+        /// <returns></returns>
+        public EmployeeManagerMemento CreateMemento() => new EmployeeManagerMemento(_id, _employee);
+
+        /// <summary>
+        /// Originator.
+        /// </summary>
+        /// <param name="memento"></param>
+        public void RestoreMemento(EmployeeManagerMemento memento)
+        {
+            _id = memento.ManagerId;
+            _employee = memento.Employee;
         }
         public bool CanExecute()
         {

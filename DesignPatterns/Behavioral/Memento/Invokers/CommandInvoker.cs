@@ -1,33 +1,46 @@
-﻿using Memento.Interfaces.Commands;
+﻿using Memento.Commands;
+using Memento.Interfaces.Commands;
+using Memento.Mementos;
 
 namespace Memento.Invokers
 {
+    /// <summary>
+    /// Caretaker.
+    /// </summary>
     public class CommandInvoker
     {
-        // First in, last out structure.
-        private readonly Stack<ICommand> _commands = new Stack<ICommand>();
+        private readonly Stack<EmployeeManagerMemento> _mementos = new();
+        private EmployeeCommand? _command;
         public void Invoke(ICommand cmd)
         {
+            // For reuse (Instead of stroing different instances.)
+            if (_command == null)
+            {
+                _command = (EmployeeCommand)cmd;
+            }
+
             if (cmd.CanExecute())
             {
                 cmd.Execute();
-                _commands.Push(cmd);
+                _mementos.Push(((EmployeeCommand)cmd).CreateMemento());
             }
         }
 
         public void Undo()
         {
-            if (_commands.Any())
+            if (_mementos.Any())
             {
-                _commands.Pop()?.Undo();
+                _command?.RestoreMemento(_mementos.Pop());
+                _command?.Undo();
             }
         }
 
         public void UndoAll()
         {
-            while (_commands.Any())
+            while (_mementos.Any())
             {
-                _commands.Pop()?.Undo();
+                _command?.RestoreMemento(_mementos.Pop());
+                _command?.Undo();
             }
         }
     }

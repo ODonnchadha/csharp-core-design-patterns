@@ -96,3 +96,9 @@
   - The intent of this pattern is to capture and externlize an object's internal state so that the onject can be restored to this state later, without violation encapsulation.
   - Store and restore private field and property values.
   - Solve with memento: Making internal state public breaks encapsulation.
+  - Provide two interfaces to the Meemento: 
+    - A wide interface, used by the command to create the Memento. Narrow interface, used by the command manager (for storage.)
+  - The Players:
+    - Memento: Stores the internal state of the originator. The state should be protected against access by other objects as much as possible.
+    - Originator: Creates a Memento with a snapshhot of its internal state. It also uses the Memento to restore its internal state.
+    - Caretaker: Keeps the Memento safe and should not operate on or examine its contents.
