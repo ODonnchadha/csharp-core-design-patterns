@@ -102,3 +102,27 @@
     - Memento: Stores the internal state of the originator. The state should be protected against access by other objects as much as possible.
     - Originator: Creates a Memento with a snapshhot of its internal state. It also uses the Memento to restore its internal state.
     - Caretaker: Keeps the Memento safe and should not operate on or examine its contents.
+  - Use Cases:
+    - When part of an object's state must be saved so it can be restored later on.
+    - And when a dorect interface to obtaining the state would expose implementation details and break encapsulation.
+  - Pattern COnsequences:
+    - It preserves encapsulation boundaries.
+    - It simplefies the originator.
+    - Using Mementos might be expensive.
+    - It can introduce complexity to your codebase.
+  - Related Patterns:
+    - Command: Can use a Memento to store and restire its state.
+    - Iterator: Memento can be used to capture the current interation state and potentially roll it back.
+  - Summary:
+    - Capture and internalize an object's internal state so that the object can be restored to this state later, without violating encapsulation.
+    - With implementation, make the distinction between a narrow and a wider interface to the Memento.
+
+- MEDIATOR:
+  - The intent is to define an object, the mediator, that encapsulates how a set of objects interact.
+  - It does this by forcing objects to communicate with each other via the mediator, promoting loose coupling.
+  - NOTE: Obects hold references to each other. Management and keeping communication in sync is an issue.
+  - A central object, the mediator, holds references to objects that want to communicate with each other. It handles communication between them.
+  - The Players:
+    - Mediator defines an interface for communicating with Colleague objects.
+    - Colleague knows its Mediator and communicates with it instead of with another Colleague.
+    - Concrete Mediator knows and maintains it Colleagues, and it implements cooperative behavior by coordingating Colleague objects.

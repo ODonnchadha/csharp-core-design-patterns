@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Behavioral\Command\Command.csproj" />
+    <ProjectReference Include="..\Behavioral\Mediator\Mediator.csproj" />
     <ProjectReference Include="..\Behavioral\Memento\Memento.csproj" />
     <ProjectReference Include="..\Behavioral\Strategy\Strategy.csproj" />
     <ProjectReference Include="..\Behavioral\TemplateMethod\TemplateMethod.csproj" />
