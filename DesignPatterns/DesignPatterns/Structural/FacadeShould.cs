@@ -17,7 +17,7 @@ namespace DesignPatterns.Structural
         public void Calculate()
         {
             Assert.AreEqual(f?.CalculateDiscountPercentage(1), 0);
-            Assert.AreEqual(f?.CalculateDiscountPercentage(24), 8);
+            Assert.AreEqual(f?.CalculateDiscountPercentage(24), 12);
         }
     }
 }

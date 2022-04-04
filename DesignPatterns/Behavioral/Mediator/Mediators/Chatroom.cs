@@ -23,5 +23,16 @@ namespace Mediator.Mediators
                 member.Receive(from, message);
             }
         }
+
+        public void Send(string from, string to, string message) => 
+            _members[to]?.Receive(from, message);
+
+        public void SendTo<T>(string from, string message) where T : TeamMember
+        {
+            foreach (var member in _members.Values.OfType<T>())
+            {
+                member.Receive(from, message);
+            }
+        }
     }
 }

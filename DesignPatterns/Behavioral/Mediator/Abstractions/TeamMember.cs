@@ -12,6 +12,11 @@ namespace Mediator.Abstractions
         public string Name { get; private set; }
         public TeamMember(string name) => Name = name;
         public void Send(string message) => _room?.Send(Name, message);
+        public void Send(string to, string message) => _room?.Send(Name, to, message);
+        public void SendTo<T>(string message) where T : TeamMember
+        {
+            _room?.SendTo<T>(Name, message);
+        }
         public virtual string Receive(string from, string message) => $"{from} to {Name}: {message}";
     }
 }

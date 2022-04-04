@@ -126,3 +126,36 @@
     - Mediator defines an interface for communicating with Colleague objects.
     - Colleague knows its Mediator and communicates with it instead of with another Colleague.
     - Concrete Mediator knows and maintains it Colleagues, and it implements cooperative behavior by coordingating Colleague objects.
+  - MediatR: Simple mediator implementation in .NET. From the AutoMapper guy.
+  - Use Cases:
+    - When a set of objects communicate in well-defined but complex ways.
+    - When, because an object refers to and communicates with many other objects, the object is difficult to reuse.
+    - When behavior that is distributed between several classes should be customizable without a lot of subclassing.
+  - Pattern Consequences:
+    - It limits subclassing.
+    - It decouples colleagues.
+    - It simplifies object protocols. Not M:M anymore.
+    - New mediators can be introduced without having to change the components: Open/closed principle.
+    - It centralizes control, whch can make the mediator turn into a monolith. (Complex. Hard to maintain.)
+  - Related Patterns:
+    - Facade Pattern: Mediator abstracts communication between objects. Facada abstracts the interface to the subsystem objects to promote ease of use.
+    - Patterns that connect senders & receivers:
+      - Chain Of Responsibility: Passes a request along a chain of receivers.
+      - Command: Connects senders with receivers unidirectionally.
+      - Mediator: Eliminates direct connections altogether.
+      - Observer: Allows receivers of requests to (un)subscribe at runtime.
+  - Summary:
+    - To define an abject that encapsulates how a set of objects interact.
+    - Promotes loose coupling.
+    - Object interaction can vary independently.
+    - Use an internal method to ensure the mediator can't be set outside of an assembly.
+    - Don't allow overriding methods when not needed.
+
+- CHAIN OF RESPONSIBILITY:
+  - The intent of this pattern is the avoid coupling the sender of a request to its receiver by giving more thn one object a chance to handle the request.
+  - It does that by chaining the receiving objects and passing the request along the chain until an object handles it.
+  - Too many conditional statements. Validation method becomes bloated. Cannot easily reuse the code.
+  - The oroginal Chain Of Responsibility pattern is more strict. Original GO4:
+    - Each handler only checks whether it can handle the request or not.
+    - If it can't, the request is passed on.
+    - If it can, the request is handled and no longer passed on.
