@@ -163,3 +163,13 @@
     - Handler defines an interface for handling requests and optionally implements the successor link.
     - Concrete Handler handles the requests it is responsible for. It can access the successor and potentially pass the request on.
     - Client initiats the request to a Concrete Handler object on the chain.
+  - Use Cases:
+    - When more than one object may handle a request and the handler isn't known beforehand.
+    - When you want to issue a request to one of several objects (handlers) without specifying the receiver explicitly.
+    - When the set of objects that handle a request should be specified dynamically.
+  - Pattern Consequences:
+    - It enables reduced coupling & works toward a single responsibility per class.
+    - It adds flexibility in regard to assigning responsibilities to objects.
+    - It does not guarentee receipt of the request.
+  - Related Patterns:
+    - 

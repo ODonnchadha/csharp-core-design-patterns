@@ -8,10 +8,14 @@ namespace DesignPatterns.Behavioral
 {
     public class ChainOfResponsibilityShould
     {
-        DocumentTitleHandler handler1 = new DocumentTitleHandler();
-        DocumentLastModifiedHandler handler2 = new DocumentLastModifiedHandler();
-        DocumentApprovedByLitigationHandler handler3 = new DocumentApprovedByLitigationHandler();
-        DocumentApprovedByManagementHandler handler4 = new DocumentApprovedByManagementHandler();
+        DocumentTitleHandler handler1 = 
+            new DocumentTitleHandler();
+        DocumentLastModifiedHandler handler2 = 
+            new DocumentLastModifiedHandler();
+        DocumentApprovedByLitigationHandler handler3 = 
+            new DocumentApprovedByLitigationHandler();
+        DocumentApprovedByManagementHandler handler4 = 
+            new DocumentApprovedByManagementHandler();
 
         [SetUp()]
         public void SetUp()
