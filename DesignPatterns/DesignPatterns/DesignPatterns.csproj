@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Behavioral\ChainOfResponsibility\ChainOfResponsibility.csproj" />
     <ProjectReference Include="..\Behavioral\Command\Command.csproj" />
     <ProjectReference Include="..\Behavioral\Mediator\Mediator.csproj" />
     <ProjectReference Include="..\Behavioral\Memento\Memento.csproj" />

@@ -158,4 +158,8 @@
   - The oroginal Chain Of Responsibility pattern is more strict. Original GO4:
     - Each handler only checks whether it can handle the request or not.
     - If it can't, the request is passed on.
-    - If it can, the request is handled and no longer passed on.
+    - If it can, the request is handled and no longer passed on. e.g.: Middleware(s).
+  - The Players:
+    - Handler defines an interface for handling requests and optionally implements the successor link.
+    - Concrete Handler handles the requests it is responsible for. It can access the successor and potentially pass the request on.
+    - Client initiats the request to a Concrete Handler object on the chain.
