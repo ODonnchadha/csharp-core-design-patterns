@@ -231,3 +231,23 @@
     - Context defines the interface that's of interest to clients. It maintains an instance of a Concrete State subclass that defines the current state.
     - Concrete State implements behavior associated with a state of the COntext.
     - State defines an interface for encapsulating the behavior associated with a particular state of the context.
+  - Use Cases:
+    - When an object's behavior depends on its state ad it must change it at runtime (depending on that state.)
+    - When your objects are dealing with large conditional statements that depend on the object's state.
+  - Pattern Consequences:
+    - It localizes state-specific behavior and partitions behavior for different states: Single responsibility principle.
+    - New states and transitions can be easily added by defining new subclasses: Open/closed principle.
+    - The number of classes is increased, whoch adds additional complexity.
+  - Related Patterns:
+    - Flyweight: Without instance variables in the state objects, they become flyweights.
+    - Singleton: State objects are often singleton.
+    - Strategy: Also based on composition, but solves a different problem.
+    - Bridge: Also based on composition, but solves a different problem.
+  - Summary:
+    - To allow an object to alter its behavior when its internal state changes.
+    - Implementation:
+      - Transitions are handled in the state objects themselves.
+      - Context needs to pass requirements through to the underlying state objects to handle them.
+
+- ITERATOR:
+  - 
