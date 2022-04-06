@@ -220,4 +220,14 @@
       - Concrete Subjects are responsible for managing their own state.
 
 - STATE:
-  - 
+  - The intent of this pattern is to allow an object to alter its behavior when its internal state changes. The object will appear to change its class.
+  - e.g.: Withdrawing money from a bank account can change its state from REGULAR to OVERDRAWN. Or adding additional state.
+  - Concrete implementation over enumeration.
+  - The more states you have, the more improvements in regards to complexity you'll notice.
+    - Typically not every state can transition to all others. 
+  - Conditional statements become easier.
+    - You don't have to check for the state you're in when you're in a state object.
+  - The Players:
+    - Context defines the interface that's of interest to clients. It maintains an instance of a Concrete State subclass that defines the current state.
+    - Concrete State implements behavior associated with a state of the COntext.
+    - State defines an interface for encapsulating the behavior associated with a particular state of the context.

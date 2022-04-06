@@ -27,6 +27,7 @@
     <ProjectReference Include="..\Creational\FactoryMethod\FactoryMethod.csproj" />
     <ProjectReference Include="..\Creational\Prototype\Prototype.csproj" />
     <ProjectReference Include="..\Creational\Singleton\Singleton.csproj" />
+    <ProjectReference Include="..\State\State.csproj" />
     <ProjectReference Include="..\Structural\Adapter\Adapter.csproj" />
     <ProjectReference Include="..\Structural\Bridge\Bridge.csproj" />
     <ProjectReference Include="..\Structural\Composite\Composite.csproj" />
