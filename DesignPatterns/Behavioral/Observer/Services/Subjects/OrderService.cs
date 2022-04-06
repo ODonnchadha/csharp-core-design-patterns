@@ -5,6 +5,7 @@ namespace Observer.Services.Subjects
 {
     /// <summary>
     /// Concrete Subject.
+    /// NOTE: Concrete Subjects are responsible for managing their own state.
     /// </summary>
     public class OrderService : TickerChangeNotifier
     {

@@ -199,3 +199,25 @@
     - NOTE: State is passed through via the Notify() method.
     - ORIGINAL: No need for the Concrete Observer to hold a reference to the Concrete Subject.
     - Both implementations are valid.
+  - Use Cases:
+    - When a change to one object requires changing others and you don't know in advance how many objects need to be changed.
+    - When objects that observe others are not necessarily doing that for the total amount of time the application runs.
+    - When an object should be able to notify other objects without making assumptions about who those objects are.
+  - Pattern Consequences:
+    - It allows subjects and observers to vary independently: Subclasses can be added and change wihtout having to change others: Open/closed principle.
+    - Subject and observer are loosely coupled: Open/closed principle.
+    - It can lead to a cascade of unexpected updates.
+  - Related Patterns:
+    - Patterns that connect Senders & Receivers:
+      - Chain Of Responsibility: Passes a request along a chain of receivers.
+      - Command: Connects senders with receiver unidirectionally.
+      - Mediator: Eliminates dirrect connections altogether.
+      - Observer: Allows receivers of requests to (un)subscribe at runtime.
+  - Summary:
+    - To define 1:M dependencies between objects so that when one object changes state all its deoendencies are notified and updated automatically.
+    - Implementation:
+      - Use an abstract base class to implement Notify(), Add(), Remove() functionality.
+      - Concrete Subjects are responsible for managing their own state.
+
+- STATE:
+  - 
