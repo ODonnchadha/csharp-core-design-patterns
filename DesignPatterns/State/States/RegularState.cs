@@ -13,7 +13,17 @@ namespace State.States
             Balance = balance;
             BankAccount = account;
         }
-        public override void Deposit(decimal amt) => Balance += amt;
+        public override void Deposit(decimal amt)
+        {
+            Balance += amt;
+
+            if (Balance >= 1000)
+            {
+                BankAccount.BankAccountState =
+                    new GoldState(Balance, BankAccount);
+            }
+        }
+
         public override void Withdraw(decimal amt)
         {
             Balance -= amt;

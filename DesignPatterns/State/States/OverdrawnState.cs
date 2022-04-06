@@ -10,6 +10,11 @@ namespace State.States
             Balance = balance;
             BankAccount = account;
         }
+
+        /// <summary>
+        /// NOTE: We cannot transition from OverdrawnState to GoldState directly.
+        /// </summary>
+        /// <param name="amt"></param>
         public override void Deposit(decimal amt)
         {
             Balance += amt;
