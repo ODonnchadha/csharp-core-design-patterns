@@ -250,4 +250,13 @@
       - Context needs to pass requirements through to the underlying state objects to handle them.
 
 - ITERATOR:
-  - 
+  - The intent of this pattern is to provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+  - Aggregate objects (List, Dictionary, Stack, Queue, etc...) keep their items in an internal structure.
+    - You don't want to expose this internal structure.
+    - You might not always want to traverse aggregate ojects in the same way. e.g.: Alphabetically, Reverse Order, etc...
+    - Avoid bloating the aggregate onbject interface.
+  - The Players:
+    - Aggregate defines an interface for creating an Iterator object.
+    - Iterator defines an interface for accessing and traversing elements.
+    - Concrete Iterator implements the Iterator interface and keeps track of the current position in the traversal of the Aggregate.
+    - Concrete Aggregate implements the Iterator interface to return an instance of the proper Concrete Iterator.
