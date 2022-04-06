@@ -172,4 +172,30 @@
     - It adds flexibility in regard to assigning responsibilities to objects.
     - It does not guarentee receipt of the request.
   - Related Patterns:
-    - 
+    - Composite: The parent of a leaf can act as the successor.
+    - Command: Chain Of Responsibility handlers can be implemented as commands.
+    - Patterns that connect Senders & Receivers:
+      - Chain Of Responsibility: Passes a request along a chain of receivers.
+      - Command: Connects senders with receiver unidirectionally.
+      - Mediator: Eliminates dirrect connections altogether.
+      - Observer: Allows receivers of requests to (un)subscribe at runtime.
+  - Summary:
+    - Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request.
+    - Implementation:
+      - Provide an easy way to set the next handler.
+      - Return the successor when setting the next handler to enable a fluent interface.
+      - Use generics to make the handler more generic.
+
+- OBSERVER:
+  - AKA "Pub/Sub."
+  - The intent of this pattern is to define a one-to-many dependency between objects so that when one object changes state all its dependents are notified and updated automatically.
+  - Common pattern: Observables in Angular. Service commuication in microservice architectures.
+  - Tight coupling becomes complex to maintain.
+  - The Players:
+    - Observer defines an updating interface for objects that should be notified of changes in a Subject.
+    - Subject knows its Observers. Provides an interface for attaching and detaching them.
+    - Concrete Observer stores state that must remain constistant with the Subject's state. They implement the Observer updating interface to keep state consistent.
+    - Concrete Subject stores state of interest to Concrete Observer objects, and sends a notification to its Observers when its state changes.
+    - NOTE: State is passed through via the Notify() method.
+    - ORIGINAL: No need for the Concrete Observer to hold a reference to the Concrete Subject.
+    - Both implementations are valid.
