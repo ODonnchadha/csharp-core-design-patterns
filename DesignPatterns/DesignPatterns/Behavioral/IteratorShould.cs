@@ -25,7 +25,7 @@ namespace DesignPatterns.Behavioral
         }
 
         [Test()]
-        public void InteratePeople()
+        public void Interate()
         {
             var iterator = people.CreateIterator();
 

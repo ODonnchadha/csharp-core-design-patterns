@@ -23,6 +23,7 @@
     <ProjectReference Include="..\Behavioral\Observer\Observer.csproj" />
     <ProjectReference Include="..\Behavioral\Strategy\Strategy.csproj" />
     <ProjectReference Include="..\Behavioral\TemplateMethod\TemplateMethod.csproj" />
+    <ProjectReference Include="..\Behavioral\Visitor\Visitor.csproj" />
     <ProjectReference Include="..\Creational\AbstractFactory\AbstractFactory.csproj" />
     <ProjectReference Include="..\Creational\Builder\Builder.csproj" />
     <ProjectReference Include="..\Creational\FactoryMethod\FactoryMethod.csproj" />

@@ -260,3 +260,44 @@
     - Iterator defines an interface for accessing and traversing elements.
     - Concrete Iterator implements the Iterator interface and keeps track of the current position in the traversal of the Aggregate.
     - Concrete Aggregate implements the Iterator interface to return an instance of the proper Concrete Iterator.
+  - Use Cases:
+    - When you want to access an aggregate object's content without exposing its internal representation.
+    - When you want to support multiple ways of traversal for the same aggregate object.
+    - When you want to avoid code duplication in regards to traversing the aggregate object.
+  - Pattern Consequences:
+    - Iterators simplify the interface of your aggregate structure as traversal code is seperated out: Single responsibility principle.
+    - You can implement new types of aggregate objects as iterators without them interferring with each other: Open/closed principle.
+    - Iterators can exist next to each other at the same time on the same collection.
+    - Can be a bit overkill when you only use simple traversals and collections.
+  - Related Patterns:
+    - Composite: Iterators are often used to traverse its recursive structure.
+    - Memento: Can be used to store the state of the iterator and, potentially, roll it back.
+    - Visitor: You can use an iterator to traverse a potentially complex data structure and apply logic to the items in that structure with a visitor.
+  - Summary:
+    - To provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.
+    - Imlementation:
+      - Leverage existing framework code when possible.
+
+- VISITOR:
+  - The internt of this pattern is to represent an operation to be performed on the elements of an object structure.
+  - Visitor lets you define a new operation without changing the classes of the elements on which it operates.
+  - The more additional requirements come in, the more often the classes will need to be changed.
+  - Also, adding all that behavior violates the single responsibility principle.
+  - The Players:
+    - Element defines an accept operation that takes a Visitor as an argument.
+    - Concrete Element impements the accept operation that takes a Visitor as an argument.
+    - Object Structure enumerates its elements. It may provide an interface to allow a Visitor to visit its Elements. It can be a composite or a collection.
+    - Visitor declares a visit operation for each class of Concrete Element in the Object Structure.
+    - Concrete Visitor implements each operation declared by Visitor.
+  - Use Cases:
+  - Pattern Consequences:
+  - Related Patterns:
+  - Summary:
+
+- INTERPRETER:
+  - 
+  - The Players:
+  - Use Cases:
+  - Pattern Consequences:
+  - Related Patterns:
+  - Summary:
