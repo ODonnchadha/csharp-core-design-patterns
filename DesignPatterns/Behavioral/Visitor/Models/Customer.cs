@@ -16,6 +16,6 @@ namespace Visitor.Models
             Name = name;
             OrderAmount = orderAmount;
         }
-        public void Accept(IVisitor visitor) => visitor.VisitCustomer(this);
+        public void Accept(IVisitor visitor) => visitor.Visit(this);
     }
 }

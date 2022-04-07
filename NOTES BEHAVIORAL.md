@@ -289,14 +289,41 @@
     - Object Structure enumerates its elements. It may provide an interface to allow a Visitor to visit its Elements. It can be a composite or a collection.
     - Visitor declares a visit operation for each class of Concrete Element in the Object Structure.
     - Concrete Visitor implements each operation declared by Visitor.
+  - Simplify the interface so that it does not to be updated with a new concrete type.
+    ```csharp
+      private interface IVisitor
+      {
+        void Visit(IElement element);
+      }
+    ```
   - Use Cases:
+    - When an object structure contains many classes of objects with differing interfaces and you want to perform operations on them that deopend on their concrete classes.
+    - When the classes defining your objectstructure don't have to change often but you do often want to define new operations over the structure.
+    - When you've got potentially many operations that need to be performed on objects in your object structure but not necessarily on all of them.
   - Pattern Consequences:
+    - It makes adding new operations easy; you can define a new operation by creating a new visitor: Open/closed principle.
+    - A vistor can accumulate information on the objects it visits.
+    - A visitor gathers related operations together and seperates unrelated onces: Single responsibility principle.
+    - Adding a new concrete element class can be hard.
+    - It might require you to break encapsulation.
   - Related Patterns:
+    - Composite: A visitor can be used to apply an operation over an object structure defined by the composite pattern.
+    - Iterator: You can use an iterator to traverse a potentially complex data structure and apply logic to the items in that structure with a visitor.
   - Summary:
+    - To represent an operation to be performed on the elements of an object structure.
+    - Implementation:
+      - IVisitor interfaces amd its implementations work on concrete objects.
 
 - INTERPRETER:
-  - 
+  - The intent of this pattern is to, given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.
+  - e.g.: LINQ queries. Regular expressions. C# compiler. Huge, unmanageable switch statement.
+  - A set of expressions is called a syntax tree.
   - The Players:
+    - Abstract Expresion declares an abstract Interpret operation that is common to all nodes in the abstract syntax tree.
+    - Terminal Expression implements an Interpret operation associated with terminal symbols in the grammar.
+    - Context contains information that is global to the Interpreter.
+    - Client builds or is given the abstract syntax tree which represents a sentence in the language that the grammar defines.
+    - Client invokes the Interpret operation.
   - Use Cases:
   - Pattern Consequences:
   - Related Patterns:

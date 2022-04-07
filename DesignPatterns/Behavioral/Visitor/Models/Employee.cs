@@ -16,6 +16,6 @@ namespace Visitor.Models
             Name = name;
             YearsEmployed = yearsEmployed;
         }
-        public void Accept(IVisitor visitor) => visitor.VisitEmployee(this);
+        public void Accept(IVisitor visitor) => visitor.Visit(this);
     }
 }

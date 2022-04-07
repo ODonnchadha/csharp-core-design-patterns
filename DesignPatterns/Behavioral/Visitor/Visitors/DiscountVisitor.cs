@@ -1,4 +1,5 @@
-﻿using Visitor.Interfaces.Visitors;
+﻿using Visitor.Interfaces.Elements;
+using Visitor.Interfaces.Visitors;
 using Visitor.Models;
 
 namespace Visitor.Visitors
@@ -9,7 +10,21 @@ namespace Visitor.Visitors
     public class DiscountVisitor : IVisitor
     {
         public decimal TotalDiscountProvided { get; set; }
-        public void VisitCustomer(Customer visitor)
+
+        public void Visit(IElement element)
+        {
+            if (element is Employee)
+            {
+                Visit((Employee)element);
+            }
+
+            if (element is Customer)
+            {
+                Visit((Customer)element);
+            }
+        }
+
+        private void Visit(Customer visitor)
         {
             var discount = visitor.OrderAmount / 10;
             visitor.Discount = discount;
@@ -17,7 +32,7 @@ namespace Visitor.Visitors
             TotalDiscountProvided += discount;
         }
 
-        public void VisitEmployee(Employee visitor)
+        private void Visit(Employee visitor)
         {
             var discount = visitor.YearsEmployed < 10 ? 100 : 200;
             visitor.Discount = discount;
