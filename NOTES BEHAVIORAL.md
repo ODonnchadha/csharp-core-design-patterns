@@ -324,7 +324,25 @@
     - Context contains information that is global to the Interpreter.
     - Client builds or is given the abstract syntax tree which represents a sentence in the language that the grammar defines.
     - Client invokes the Interpret operation.
+  - Terminal expressions:
+    - A symbol, the smallest meaningful part or unit of a language, is called a terminal.
+    - Implemented through a terminal expression. Terminals make up statements.
+  - Non-terminal expressions:
+    - Statements that are made up of terminals and are allowed by a language are called non-terminals.
+    - Can consist of terminals and/or non-terminals.
+    - e.g.: A list of abstract expressions make up a non-terminal expression.
   - Use Cases:
+    - When there's a language you can interpret and you can represent statements in the language as abstract syntax trees.
+    - AND when the grammar is simple.
+    - AND when the best possible efficiency isn't required. e.g. State machines.
   - Pattern Consequences:
+    - It's easy to change and extend the grammar.
+    - It's easy to implement the grammar.
+    - Complex grammars are hard to maintain. Rules = Classes to maintain.
   - Related Patterns:
+    - Composite: The abstract syntax tree is an instance of the composite pattern.
+    - Iterator: You an use the iterator to traverse the tree.
   - Summary:
+    - To, given a language, define a representation for its grammar along with an interpreter that uses the representation to intrepret sentences in the language.
+    - A symbol, the smallest meaningful part or unit of a language, is called a terminal.
+    - Statements that are made up of terminals and are aowed by a language care called non-terminals.
